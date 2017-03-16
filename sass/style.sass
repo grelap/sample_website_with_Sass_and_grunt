@@ -1,0 +1,527 @@
+$primaryfont: 'Open Sans', sans-serif
+//colors
+$grey: #313234
+$border-grey: #808080
+$black: #000
+$lightgrey: #d3d3d3
+$white: #fff
+$nav-hover: #00C7E8
+
+*
+  box-sizing: border-box
+
+body
+  font-family: $primaryfont
+  margin: 0
+
+h1
+  > span
+    &:first-child
+      color: $white
+      font-weight: 300
+
+.container
+  margin: 0 auto
+  max-width: 1200px
+
+section
+  > .container
+    margin: 90px auto
+
+// -----clearfix-----
+.row::before,
+.row::after
+  clear: both
+  content: ''
+  display: table
+
+.center
+  text-align: center
+
+.left
+  margin-left: -20px
+  text-align: left
+
+//--- navigation ---
+header
+  background-color: $grey
+  height: 55px
+
+  > nav
+    > ul
+      float: right
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+      > li
+        display: inline-block
+        line-height: 50px
+
+        > a
+          color: $white
+          padding: 0 20px
+          text-decoration: none
+          text-transform: uppercase
+          transition: .3s
+
+          &:hover
+            color: $nav-hover
+            transform: scale(1.1)
+
+    > img
+      padding: 5px 0
+
+//--- hero ---
+.hero
+  background-image: url('https://static.pexels.com/photos/247932/pexels-photo-247932.jpeg')
+  background-position: 0 44%
+  background-size: cover
+  height: 60vh
+  overflow: hidden
+  text-align: center
+  width: 100%
+
+.slogan
+  background-color: rgba($black, .6)
+  color: $white
+  float: right
+  font-size: 2em
+  line-height: 1.5em
+  margin-top: 20vh
+  max-width: 800px
+  padding: 0 40px
+  text-align: left
+  text-transform: uppercase
+
+section,
+ul,
+div
+  span
+    display: block
+
+//--- benefits ---
+.box
+  i
+    background-color: $grey
+    border-radius: 25%
+    color: $white
+    font-size: 6rem
+    height: 180px
+    line-height: 180px
+    margin: 0 auto
+    text-decoration: none
+    transition: .3s
+    width: 180px
+
+  h2
+    transition: .2s
+
+  &:hover
+    i
+      background-color: $nav-hover
+      color: $white
+
+    h2
+      color: $nav-hover
+
+.benefits
+  p
+    color: $lightgrey
+    font-weight: 400
+    line-height: 1.6em
+    padding: 0 35px
+
+  h2
+    text-transform: uppercase
+
+//--- featured ---
+.featured
+  h2
+    font-size: 3em
+    margin: 20px 0 0
+    text-transform: uppercase
+
+  p
+    color: $border-grey
+    margin: 10px 130px 0
+
+//--- gallery ---
+.gallery
+  img
+    display: block
+    height: 35vh
+    margin: 0
+    object-fit: cover
+    overflow: hidden
+    padding: 0
+    width: 100%
+
+  & [class *='col-']
+    padding: 0
+
+.layer
+  height: 35vh
+  line-height: 35vh
+  position: absolute
+  text-align: center
+  transition: .2s
+  width: inherit
+  z-index: 2
+
+  i.fa
+    background-color: $white
+    border-radius: 25%
+    color: $black
+    font-size: 1.5em
+    padding: 20px
+    transition: .1s
+    visibility: hidden
+    
+//--- workers ---
+.workers
+  display: block
+  margin: 0 auto
+  text-align: center
+  width: 100%
+
+.mask
+  border-radius: 50%
+  height: 200px
+  margin: 0 auto
+  position: relative
+  width: 200px
+
+  img
+    border-radius: 50%
+    display: block
+    height: 200px
+    object-fit: cover
+    overflow: hidden
+    width: 200px
+
+  a
+    border-radius: 50%
+    cursor: pointer
+    display: block
+
+// --- promo ---
+.promo
+  background-color: $border-grey
+  color: $white
+  height: auto
+  padding-bottom: 20px
+
+  & [class *='col-']
+    margin-bottom: -60px
+    min-height: 30px
+
+  h2
+    color: $white
+    font-size: 3em
+    padding: 0
+    text-transform: uppercase
+
+  img
+    height: auto
+    margin-top: 61px
+    max-width: 350px
+    width: 100%
+
+//--- numbers ---*/
+.numbers
+  margin-top: -80px
+  min-height: 280px
+
+  h3
+    font-family: 'Alfa Slab One', cursive
+    font-size: 3.5em
+    text-align: center
+    text-transform: capitalize
+
+  p
+    color: $nav-hover
+    font-weight: bold
+    margin-top: -50px
+    text-align: center
+    text-transform: uppercase
+
+//--- footer ---
+footer
+  background-color: $grey
+  color: $white
+  height: auto
+  width: inherit
+
+  ul
+    list-style-type: none
+    margin-top: -25px
+    padding: 0
+
+    li
+      padding: 10px
+
+  h2
+    margin-top: 30px
+
+  i.fa
+    background-color: $nav-hover
+    cursor: pointer
+    font-size: 2em
+    height: 1.45em
+    line-height: 1.45em
+    margin: 5px
+    text-align: center
+    transition: .2s
+    width: 1.45em
+
+    &:hover
+      background-color: $white
+      color: $nav-hover
+
+  & [class*='col-']
+    min-height: 20px
+    padding: 20px
+
+.copyright
+  background-color: #212223
+  color: $white
+  font-size: .9em
+
+.line
+  &::after
+    background-color: $white
+    content: ''
+    height: 2px
+    margin: 15px
+    position: absolute
+    width: 8vw
+
+/* --- column widths generator ---
+
+@for $c from 1 through 12
+  .col-#{$c}
+    width: 100% * $c / 12
+
+[class*='col-']
+  float: left
+  padding: 12px
+  width: 100%
+
+/* column offset generator
+
+@for $c from 1 through 12
+  .col-offset-#{$c}
+    margin-left: 100% * $c / 12
+
+//---------------------------------
+
+@media (max-width: 767px)
+  // For tablets: */ 
+
+  //--- navigation ---*/
+  header
+    background-color: $grey
+    height: auto
+    margin: 0
+
+  ul
+    margin: 0 auto
+    text-align: center
+
+  header
+    > nav
+      > ul
+        border-top: 1px solid $border-grey
+        float: none
+        height: 100%
+        list-style-type: none
+        padding: 0
+
+        > li
+          border-top: 1px dashed $border-grey
+          line-height: 50px
+
+          &:first-child
+            border-top: 0 dashed $border-grey
+
+          > a
+            display: block
+            font-size: 1.2em
+            padding: 15px
+            text-align: center
+            text-decoration: none
+            text-transform: uppercase
+            transition: .2s
+            width: 80vw
+
+      > img
+        display: block
+        margin: 0 auto
+        padding: 25px
+
+  .hero
+    background-image: url('https://static.pexels.com/photos/247932/pexels-photo-247932.jpeg')
+    background-position: 0 44%
+    background-size: cover
+    height: auto
+    overflow: hidden
+    padding-bottom: 10vw
+    text-align: center
+    width: 100%
+
+  .slogan
+    font-size: 4vw
+    line-height: 6.5vw
+    max-width: 80vw
+
+  /*--- featured ---*/
+  .featured
+    h2
+      margin: 0
+
+    p
+      margin: 10px 30px 0
+
+  /*------- gallery------------*/
+  .layer
+    i.fa
+      background-color: rgba($white, .6)
+      font-size: 1.7em
+      margin-top: 20px
+      padding: 20px
+      visibility: visible
+
+  /*-----workers--------*/
+  .mask
+    p
+      color: $black
+      font-size: 1.2em
+      position: absolute
+      top: 220px
+      visibility: visible
+      width: 100%
+
+    a
+      cursor: default
+
+  /*----- promo-------*/
+  .promo 
+    background-color: $border-grey
+    color: $white
+    padding-bottom: 20px
+
+    p
+      width: 100%
+
+    h2
+      line-height: 1.2em
+      margin: 40px 10px 30px 0
+
+    img
+      display: block
+      width: 100%
+
+  /*---- footer------*/
+  footer
+    background-color: $grey
+    color: $white
+    height: auto
+
+
+  /*---- columns widths generator------*/
+  @for $c from 1 through 12
+    .col-s-#{$c}
+      width: 100% * $c / 12
+
+
+/*---------------------------------------------*/
+@media (min-width: 768px)
+  /* For desktop: */
+  .promo
+    img
+      height: auto
+      width: 100%
+
+  .mask
+    p
+      color: $black
+      font-size: 1.2em
+      position: absolute
+      top: 220px
+      visibility: visible
+      width: 100%
+
+    a
+      cursor: default
+
+  /*------- gallery------------*/
+  .layer
+    line-height: 60vh
+
+    i.fa
+      background-color: rgba($white, .6)
+      font-size: 1.2em
+      visibility: visible
+
+  @for $c from 1 through 12
+    .col-m-#{$c}
+      width: 100% * $c / 12
+
+/*-----------------------------------------------*/
+@media (min-width: 900px)
+
+  .mask
+    p
+      border-radius: 50%
+      color: rgba($white, .1)
+      font-size: 1.5em
+      font-weight: 300
+      height: 200px
+      line-height: 200px
+      margin: 0 auto
+      position: absolute
+      top: 0
+      transition: .2s
+      visibility: hidden
+      width: 200px
+
+  .mask
+    &:hover
+      p
+        background-color: rgba($black, 0.8)
+        color: rgba(255, 255, 255, 1)
+        visibility: visible
+
+  .layer
+    i.fa
+      background-color: $white
+      border-radius: 25%
+      color: $black
+      font-size: 1.5em
+      padding: 20px
+      transition: .1s
+      visibility: hidden
+
+    &:hover
+      i.fa
+        transition: ease-out .3s
+        visibility: visible
+
+    &:hover
+      background-color: rgba($black, .5)
+
+  .promo
+    padding-bottom: 20px
+
+    img
+      display: block
+      margin-bottom: -61px
+      margin-top: 61px
+
+  @for $c from 1 through 12
+    .col-#{$c}
+      width: 100% * $c / 12
+
+
+
