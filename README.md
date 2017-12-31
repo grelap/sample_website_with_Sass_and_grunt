@@ -1,5 +1,5 @@
-# exercise_7_5_website
+# exercise_7_5_website with Sass and grunt
 
 simple website using sass
-[Preview](http://htmlpreview.github.io/?https://github.com/xenogonx/kodilla_zadanie_7_5/blob/master/index.html)
+
 
