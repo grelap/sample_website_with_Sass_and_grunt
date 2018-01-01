@@ -2,5 +2,5 @@
 
 demo:
 
-https://xenogonx.github.io/exercise_7_5_website_with_Sass_and_grunt/
+https://xenogonx.github.io/sample_website_with_Sass_and_grunt/
 
